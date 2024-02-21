@@ -1,3 +1,5 @@
+// --------------------------------------------First function way------------------------------------------------------------------------------
+
 // function calculateParallelogramArea(){
 
 //     // parallelogram Base 
@@ -22,15 +24,48 @@
 //     parallelogramArea.innerText=area;
 
 // }
+// -------------------------------------------------- Second function way ---------------------------------------------------------------------------------------
+
+
+// function calculateParallelogramArea() {
+// const base =getParallelogram();
+// console.log(base)
+
+
+// }
+// function getParallelogram() {
+//     const parallelogramBaseInput = document.getElementById('parallelogram-base');
+//     const parallelogramBaseText = parallelogramBaseInput.value;
+//     const base = parseFloat(parallelogramBaseText);
+//     return base;
+// }
+
+// ------------------------------------------------------ Third function way----------------------------------------------------------------------------------------------
+
 function calculateParallelogramArea() {
-const base =getParallelogram();
-console.log(base)
+    const base = getParallelogramInput('parallelogram-base')
+    console.log('base value', base);
 
+    const height = getParallelogramInput('parallelogram-height');
+    console.log('height value', height);
 
+    const area = base * height;
+    console.log(area)
+
+    setInnerText('parallelogram-area',area)
+     
 }
-function getParallelogram() {
-    const parallelogramBaseInput = document.getElementById('parallelogram-base');
-    const parallelogramBaseText = parallelogramBaseInput.value;
-    const base = parseFloat(parallelogramBaseText);
-    return base;
+
+function getParallelogramInput(inputField) {
+    const Input = document.getElementById(inputField);
+    const Text = Input.value;
+    const inputValue = parseFloat(Text);
+    return inputValue;
 }
+
+function setInnerText(element ,area){
+    const parallelegramArea =document.getElementById(element);
+     parallelegramArea.innerText=area;
+    
+}
+

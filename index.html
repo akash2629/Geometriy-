@@ -99,6 +99,27 @@
                         </div>
                     </div>
                 </div>
+                <!-- Rhombus card -->
+                <div class="card  bg-base-100 shadow-xl">
+                    <figure><img src="./images/ellipse.png" alt="ellipse" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Ellipse</h2>
+                        <p>Area (A) =π ab</p>
+                        <div>
+                            <input id="ellipse-a" class="w-24 text-2xl p-2 rounded-sm" type="text" placeholder="a">
+                            <span class="text-xl font-medium ml-2 mr-4 ">cm</span>
+                            <input id="ellipse-b" class="w-24 text-2xl p-2 rounded-sm" type="text" placeholder="b">
+                            <span class="text-xl font-medium ml-2 mr-4 ">cm</span>
+                        </div>
+                        <div class="card-actions">
+                            <button onclick="calculateEllipseArea()" class="btn btn-primary w-full">Calculate</button>
+                    
+                        </div>
+                        <div>
+                            <p class="text-2xl">Area: <span  id="ellipse-area" >0</span><span>cm</span><sup>2</sup></p>
+                        </div>
+                    </div>
+                </div>
                 
 
             </div>
@@ -116,6 +137,7 @@
     <script src="script/rectangle.js"></script>
     <script src="script/parallelogram.js"></script>
     <script src="script/rhombus.js"></script>
+    <script src="script/ellipse.js"></script>
 </body>
 
 </html>
